@@ -22,10 +22,16 @@ The code base structure is explained below:
 ## Data Preprocess
 
 ### Obtain the Patches
-Raw WSI images and RNA-Seq can be obtained from [TCGA](https://portal.gdc.cancer.gov/). In Folder [data_preprocess](https://github.com/Mercuriiio/PMFN-SSL/tree/main/data_preprocess), run the following command to slice the WSI to get the patches.
+Raw WSI images and RNA-Seq can be obtained from [TCGA](https://portal.gdc.cancer.gov/). In Folder [data_preprocess](https://github.com/Mercuriiio/PMFN-SSL/tree/main/data_preprocess), run the following command to slice the WSI to get the patches (Requires [histolab](https://github.com/histolab/histolab) to be installed).
 
 ```
 python 1_histolab.py
+```
+
+After obtaining all the patches, we set up three sampling strategies: random, entropy, and joint sampling. Run the following command in the [data_preprocess](https://github.com/Mercuriiio/PMFN-SSL/tree/main/data_preprocess) folder to sample the patches required to get the task.
+
+```
+python 2_sample.py
 ```
 
 ## Training and Evaluation
