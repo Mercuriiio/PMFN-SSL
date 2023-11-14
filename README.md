@@ -48,3 +48,5 @@ python train.py
 ```
 python test.py
 ```
+
+[model](https://github.com/Mercuriiio/PMFN-SSL/tree/main/model) provides the parameters of the model we trained on TCGA-GBMLGG for convenient testing.
