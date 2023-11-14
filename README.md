@@ -19,6 +19,15 @@ The code base structure is explained below:
 - **integrated_gradients.py**: Contains an implementation of the integral gradient algorithm.
 - **Loader.py**: Contains definitions for collating, data preprocessing, etc...
 
+## Data Preprocess
+
+### Obtain the Patches
+Raw WSI images and RNA-Seq can be obtained from [TCGA](https://portal.gdc.cancer.gov/). In Folder [data_preprocess](https://github.com/Mercuriiio/PMFN-SSL/tree/main/data_preprocess), run the following command to slice the WSI to get the patches.
+
+```
+python 1_histolab.py
+```
+
 ## Training and Evaluation
 
 ### Survival Model for Input A
