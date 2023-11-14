@@ -28,6 +28,7 @@ Raw WSI images and RNA-Seq can be obtained from [TCGA](https://portal.gdc.cancer
 python 1_histolab.py
 ```
 
+### Patches Sampling
 After obtaining all the patches, we set up three sampling strategies: random, entropy, and joint sampling. Run the following command in the [data_preprocess](https://github.com/Mercuriiio/PMFN-SSL/tree/main/data_preprocess) folder to sample the patches required to get the task.
 
 ```
