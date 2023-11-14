@@ -2,21 +2,7 @@
 
 **Summary:** We propose self-supervised transformer-based pathology feature extraction strategy, and construct an interpretable Progressive Multimodal Fusion Network (PMFN-SSL) for cancer diagnosis and prognosis. The proposed model integrates genomics and pathomics to predict patients' survival risk and cancer grading with progressive learning strategy.
 
-<img src="https://github.com/Mercuriiio/PMFN-SSL/tree/main/figure/model.jpg" width="1024"/>
-
-## Community / Follow-Up Work
-<table>
-<tr>
-<td>GitHub Repositories / Projects</td>
-<td>
-<a href="https://github.com/Liruiqing-ustc/HFBSurv" target="_blank">★</a>
-<a href="https://github.com/mahmoodlab/PORPOISE" target="_blank">★</a>
-<a href="https://github.com/TencentAILabHealthcare/MLA-GNN" target="_blank">★</a>
-<a href="https://github.com/zcwang0702/HGPN" target="_blank">★</a>
-<a href="https://github.com/isfj/GPDBN" target="_blank">★</a>
-</td>
-</tr>
-</table>
+![image](https://github.com/Mercuriiio/PMFN-SSL/blob/main/figure/model.jpg)
 
 ## Setup
 
