@@ -35,21 +35,16 @@ After obtaining all the patches, we set up three sampling strategies: random, en
 python 2_sample.py
 ```
 
+### Patch Feature Extraction
+Self-supervised learning of patches using the [UFormer network](https://github.com/ZhendongWang6/Uformer) and modifying the output header for weakly-supervised prediction. [data](https://github.com/Mercuriiio/PMFN-SSL/tree/main/data/gbmlgg) shows some of the multimodal data collected. You can obtain the genetic data according to different standardized methods and pre-process the pathology images using the code we have provided. Please note that due to the automated ease of data processing, we only provide some of the training test data for reference.
+
 ## Training and Evaluation
 
-### Survival Model for Input A
-Example shown below for training a survival model for mode A and saving the model checkpoints + predictions at the end of each split. In this example, we would create a folder called "CNN_A" in "./checkpoints/example/" for all the models in cross-validation. It assumes that "A" is defined as a mode in **dataset_loaders.py** for handling modality-specific data-preprocessing steps (random crop + flip + jittering for images), and that there is a network defined for input A in **networks.py**. "surv" is already defined as a task for training networks for survival analysis in **options.py, networks.py, train_test.py, train_cv.py**.
+Train and test model with the following code.
 
 ```
-python train_cv.py --exp_name surv --dataroot ./data/example/ --checkpoints_dir ./checkpoints/example/ --task surv --mode A --model_name CNN_A --niter 0 --niter_decay 50 --batch_size 64 --reg_type none --init_type max --lr 0.002 --weight_decay 4e-4 --gpu_ids 0
+python train.py
 ```
-To obtain test predictions on only the test splits in your cross-validation, you can replace "train_cv" with "test_cv".
 ```
-python test_cv.py --exp_name surv --dataroot ./data/example/ --checkpoints_dir ./checkpoints/example/ --task surv --mode input_A --model input_A_CNN --niter 0 --niter_decay 50 --batch_size 64 --reg_type none --init_type max --lr 0.002 --weight_decay 4e-4 --gpu_ids 0
-```
-
-### Grade Classification Model for Input A + B
-Example shown below for training a grade classification model for fusing modes A and B. Similar to the previous example, we would create a folder called "Fusion_AB" in "./checkpoints/example/" for all the models in cross-validation. It assumes that "AB" is defined as a mode in **dataset_loaders.py** for handling multiple inputs A and B at the same time. "grad" is already defined as a task for training networks for grade classification in **options.py, networks.py, train_test.py, train_cv.py**.
-```
-python train_cv.py --exp_name surv --dataroot ./data/example/ --checkpoints_dir ./checkpoints/example/ --task grad --mode AB --model_name Fusion_AB --niter 0 --niter_decay 50 --batch_size 64 --reg_type none --init_type max --lr 0.002 --weight_decay 4e-4 --gpu_ids 0
+python test.py
 ```
