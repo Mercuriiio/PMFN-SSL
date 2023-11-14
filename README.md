@@ -49,4 +49,6 @@ python train.py
 python test.py
 ```
 
-[model](https://github.com/Mercuriiio/PMFN-SSL/tree/main/model) provides the parameters of the model we trained on TCGA-GBMLGG for convenient testing.
+[model](https://github.com/Mercuriiio/PMFN-SSL/tree/main/model) provides the parameters of the model we trained on TCGA-GBMLGG for convenient testing. In addition, in the interpretability analysis section, we refer to the [Grad-CAM](https://github.com/frgfm/torch-cam) and [Integrated Gradients](https://github.com/hobinkwak/ExpectedGradients_IntegratedGradients_pytorch/tree/main) methods. When using Grad-CAM, we defined the samples into different cancer grades based on their survival time (the number of categories refer to cancer grading) and modified the last layer of the pre-trained network to be the classification output layer. When using the Integrated Gradients algorithm, we set the number of iteration steps to 1000 to obtain a more reasonable gene importance ranking.
+
+The KM curve plots are implemented in R language. We first obtained and sorted the survival prediction output for each sample, and then categorized them into risk groups based on different quantiles (e.g., tertiles of TCGA-GBMLGG).
