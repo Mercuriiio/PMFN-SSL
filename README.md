@@ -5,8 +5,7 @@
 ![image](https://github.com/Mercuriiio/PMFN-SSL/blob/main/figure/model.jpg)
 
 ### Prerequisites
-- Linux (Tested on Ubuntu 18.04)
-- NVIDIA GPU (Tested on Nvidia GeForce RTX 3060 on local workstations)
+- NVIDIA GPU (Tested on Nvidia GeForce RTX 3060)
 - CUDA + cuDNN (Tested on CUDA 10.1 and cuDNN 7.5.)
 - torch>=1.1.0
 - histolab=0.6.0
