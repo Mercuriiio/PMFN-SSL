@@ -4,27 +4,21 @@
 
 ![image](https://github.com/Mercuriiio/PMFN-SSL/blob/main/figure/model.jpg)
 
-## Setup
-
 ### Prerequisites
 - Linux (Tested on Ubuntu 18.04)
-- NVIDIA GPU (Tested on Nvidia GeForce RTX 2080 Tis on local workstations, and Nvidia V100s using Google Cloud)
-- CUDA + cuDNN (Tested on CUDA 10.1 and cuDNN 7.5. CPU mode and CUDA without CuDNN may work with minimal modification, but untested.)
+- NVIDIA GPU (Tested on Nvidia GeForce RTX 3060 on local workstations)
+- CUDA + cuDNN (Tested on CUDA 10.1 and cuDNN 7.5.)
 - torch>=1.1.0
-- torch_geometric=1.3.0
+- histolab=0.6.0
 
 ## Code Base Structure
 The code base structure is explained below: 
-- **train_cv.py**: Cross-validation script for training unimodal and multimodal networks. This script will save evaluation metrics and predictions on the train + test split for each epoch on every split in **checkpoints**.
-- **test_cv.py**: Script for testing unimodal and unimodal networks on only the test split.
-- **train_test.py**: Contains the definitions for "train" and "test". 
-- **networks.py**: Contains PyTorch model definitions for all unimodal and multimodal network.
-- **fusion.py**: Contains PyTorch model definitions for fusion.
-- **data_loaders.py**: Contains the PyTorch DatasetLoader definition for loading multimodal data.
-- **options.py**: Contains all the options for the argparser.
-- **make_splits.py**: Script for generating a pickle file that saves + aligns the path for multimodal data for cross-validation.
-- **run_cox_baselines.py**: Script for running Cox baselines.
-- **utils.py**: Contains definitions for collating, survival loss functions, data preprocessing, evaluation, figure plotting, etc...
+- **train.py**: Cross-validation script for training unimodal and multimodal networks.
+- **test_.py**: Script for testing networks on only the test split.
+- **Model.py**: Contains PyTorch model definitions for all unimodal and multimodal network.
+- **NegativeLogLikelihood.py**: The survival analysis loss function used in the method.
+- **integrated_gradients.py**: Contains an implementation of the integral gradient algorithm.
+- **Loader.py**: Contains definitions for collating, data preprocessing, etc...
 
 ## Training and Evaluation
 
