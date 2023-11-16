@@ -10,6 +10,16 @@
 - torch>=1.1.0
 - histolab=0.6.0
 
+### Referenced Repositories
+Cox-EN: [Cox-EN](https://www.jstatsoft.org/article/view/v039i05)
+Cox-PASNet: [Cox-PASNet](https://github.com/DataX-JieHao/Cox-PASNet)
+SCNN/GSCNN: [SCNN](https://github.com/PathologyDataScience/SCNN)
+DeepConvSurv: [DeepConvSurv](https://github.com/vanAmsterdam/deep-survival)
+PAGE-Net: [PAGE-Net](https://github.com/DataX-JieHao/PAGE-Net)
+MCAT: [MCAT](https://github.com/mahmoodlab/MCAT)
+Pathomic Fusion: [Pathomic Fusion](https://github.com/mahmoodlab/PathomicFusion)
+GTP: [GTP](https://github.com/vkola-lab/tmi2022)
+
 ## Code Base Structure
 The code base structure is explained below: 
 - **train.py**: Cross-validation script for training unimodal and multimodal networks.
