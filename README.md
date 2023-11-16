@@ -46,7 +46,7 @@ python 2_sample.py
 ```
 
 ### Patch Feature Extraction
-Self-supervised learning of patches using the [UFormer network](https://github.com/ZhendongWang6/Uformer) and modifying the output header for weakly-supervised prediction. [data](https://github.com/Mercuriiio/PMFN-SSL/tree/main/data/gbmlgg) shows some of the multimodal data collected. You can obtain the genetic data according to different standardized methods and pre-process the pathology images using the code we have provided. Please note that due to the automated ease of data processing, we only provide some of the training test data for reference.
+Self-supervised learning of patches using the [UFormer network](https://github.com/ZhendongWang6/Uformer) and modifying the output header for weakly-supervised prediction. [data](https://github.com/Mercuriiio/PMFN-SSL/tree/main/data/gbmlgg) shows some of the multimodal data collected. You can obtain the genetic data according to different standardized methods and pre-process the pathology images using the code we have provided. Please note that due to the automated ease of data processing, we only provide some of the test data for reference.
 
 ## Training and Evaluation
 
