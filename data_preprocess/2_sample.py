@@ -58,11 +58,11 @@ for tcga_file in tcga_files:
         var_path.append(img_path)
 
     if len(var) > 500 and len(var) <= 1000:
-        img_select = 30
-    elif len(var) > 1000:
         img_select = 50
+    elif len(var) > 1000:
+        img_select = 100
     else:
-        img_select = 10
+        img_select = 30
     print(len(var), img_select)
     for i in range(len(var)):
         number = max(var)
