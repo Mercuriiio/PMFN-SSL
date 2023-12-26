@@ -61,8 +61,10 @@ for tcga_file in tcga_files:
         img_select = 50
     elif len(var) > 1000:
         img_select = 100
-    else:
+    elif len(var) > 50 and len(var) <= 500:
         img_select = 30
+    else:
+        img_select = 1
     print(len(var), img_select)
     for i in range(len(var)):
         number = max(var)
